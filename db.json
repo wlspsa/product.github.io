@@ -1,67 +1,67 @@
 {
-    "catbox-services":[
+    "catbox_services":[
         {
             "id" : 1,
-            "product-name" : "Cat In Box",
+            "product_name" : "Cat In Box",
             "price" : 120,
-            "cat-product" : true,
-            "box-product" : true,
+            "cat_product" : true,
+            "box_product" : true,
             "availbilty" : true
         },
         {
             "id" : 2,
-            "product-name" : "Cat Shaped Box",
+            "product_name" : "Cat Shaped Box",
             "price" : 20,
-            "cat-product" : false,
-            "box-product" : true,
+            "cat_product" : false,
+            "box_product" : true,
             "availbilty" : true
         },
         {
             "id" : 3,
-            "product-name" : "Box Shaped Cat",
+            "product_name" : "Box Shaped Cat",
             "price" : 220,
-            "cat-product" : true,
-            "box-product" : true,
+            "cat_product" : true,
+            "box_product" : true,
             "availbilty" : true
         },
         {
             "id" : 4,
-            "product-name" : "Just a Box",
+            "product_name" : "Just a Box",
             "price" : 15,
-            "cat-product" : false,
-            "box-product" : true,
+            "cat_product" : false,
+            "box_product" : true,
             "availbilty" : true
         },
         {
             "id" : 5,
-            "product-name" : "Just a Cat",
+            "product_name" : "Just a Cat",
             "price" : 120,
-            "cat-product" : true,
-            "box-product" : false,
+            "cat_product" : true,
+            "box_product" : false,
             "availbilty" : true
         },
         {
             "id" : 6,
-            "product-name" : "Cat Box Realignment",
+            "product_name" : "Cat Box Realignment",
             "price" : 340,
-            "cat-product" : true,
-            "box-product" : false,
+            "cat_product" : true,
+            "box_product" : false,
             "availbilty" : false
         },
         {
             "id" : 1,
-            "product-name" : "Box Conditioning Service",
+            "product_name" : "Box Conditioning Service",
             "price" : 200,
-            "cat-product" : false,
-            "box-product" : true,
+            "cat_product" : false,
+            "box_product" : true,
             "availbilty" : true
         },
         {
             "id" : 7,
-            "product-name" : "Adjustment Support Service",
+            "product_name" : "Adjustment Support Service",
             "price" : 350,
-            "cat-product" : true,
-            "box-product" : false,
+            "cat_product" : true,
+            "box_product" : false,
             "availbilty" : true
         }
     ]
