@@ -1,27 +1,32 @@
-:root{
-    --TG-Color: #f14;
+:root {
+    --TG-Color: #900;
     --HG-Color: #f36;
     --FG-Color: #f9b;
     --MG-Color: #fbc;
     --BG-Color: #fdd;
     --LG-Color: #fef;
 }
-.main-grid{
+body{
+    margin: 0;
+}
+
+.main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 6fr 3fr;
+    grid-template-rows: 1fr 8fr 6fr 2fr;
     grid-template-areas:
-    "header"
-    "about"
-    "services"
-    "email"
+        "header"
+        "about"
+        "services"
+        "email"
     ;
     width: 100%;
     height: 250%;
     background-color: var(--BG-Color);
-    gap: 1%;
+    gap: 1%;;
 }
-.header{
+
+.header {
     grid-area: "header";
     background-color: var(--MG-Color);
     border-radius: 30px;
@@ -30,17 +35,23 @@
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-    "title burger";
+        "title burger";
 }
-h1,h2,p,strong{
+
+h1,
+h2,
+p,
+strong {
     text-align: center;
     color: var(--TG-Color);
 }
-p{
+
+p,li {
     text-align: center;
     color: var(--HG-Color);
 }
-.about{
+
+.about {
     grid-area: "about";
     background-color: var(--MG-Color);
     border-radius: 20px;
@@ -49,38 +60,47 @@ p{
     align-items: center;
     gap: 2%;
 }
-.boxCat{
+
+.boxCat {
     height: 33%;
     width: 75%;
     border-radius: 30px;
 }
-.button{
+
+.button {
     height: 9%;
     width: 33%;
     border-radius: 30px;
     background-color: var(--FG-Color);
 }
-#button2{
+
+#button2 {
     height: 100%;
     width: 15%;
 }
-.serviceList{
+
+.serviceList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     row-gap: 5%;
     gap: 1%;
 }
-.services{
+
+.services {
     grid-area: "services";
     margin: 2%;
 }
-.serviceBox{
-    height: 100%;
-    width: 24%;
+
+.serviceBox {
+    height: 150px;
+    width: 150px;
+    margin: 1%;
     border-radius: 30px;
     background-color: var(--MG-Color);
 }
-.email-list{
+
+.email-list {
     grid-area: "email";
     border-radius: 30px;
     background-color: var(--MG-Color);
@@ -88,12 +108,14 @@ p{
     flex-flow: column;
     justify-content: space-around;
 }
-.email-list-options{
+
+.email-list-options {
     display: flex;
     justify-content: center;
     gap: 5%;
 }
-.email-field{
+
+.email-field {
     width: 50%;
     background-color: var(--BG-Color);
     border-color: var(--HG-Color);
@@ -102,20 +124,24 @@ p{
     color: var(--TG-Color);
     border-radius: 15px;
 }
-.burgerButton{
+
+.burgerButton {
     height: 50%;
     width: 75%;
     background-color: var(--FG-Color);
     border-radius: 30px;
     margin: 10%;
 }
-#title{
+
+#title {
     grid-area: "title";
 }
-#menu{
+
+#menu {
     grid-area: "burger";
 }
-.burgerMenu{
+
+.burgerMenu {
     position: absolute;
     top: 10%;
     width: 15%;
@@ -123,9 +149,22 @@ p{
     border-radius: 15px;
     height: 10%;
 }
-.burgerGoAway{
+
+.burgerGoAway {
     display: none;
 }
-li{
+
+li {
     color: var(--LG-Color);
+}
+
+@media (max-width:750) {
+    body{
+        background-color: red;
+        margin: 5%;
+    }
+    .main-grid{
+        height: 600%;
+        grid-template-rows: 1fr 9fr 6fr 2fr;
+    }
 }
