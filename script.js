@@ -1,7 +1,7 @@
 async function getServices() {
-    try{
+    try {
         //get data from server
-        const response = await fetch("db.json")
+        const response = await fetch("/api")
         const data = await response.json()
         const services = data.catbox_services
         console.log(services)
@@ -14,7 +14,7 @@ async function getServices() {
             service.classList.add("serviceBox")
             service.innerHTML = `<h2>${serviceData.product_name}</h2><p>$${serviceData.price}</p>`
         }
-    }catch (err){
+    } catch (err) {
         console.log(err)
     }
 }
@@ -24,6 +24,6 @@ getServices()
 const hamburgijr = document.querySelector(".burgerMenu")
 const hamburgi = document.querySelector(".burgerButton")
 hamburgijr.classList.add("burgerGoAway")
-hamburgi.addEventListener("click",()=>{
+hamburgi.addEventListener("click", () => {
     hamburgijr.classList.toggle("burgerGoAway")
 })
