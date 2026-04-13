@@ -3,7 +3,8 @@ async function getServices() {
         //get data from server
         const response = await fetch("/api")
         const data = await response.json()
-        const services = data.catbox_services
+        console.log(data)
+        const services = data[0].catbox_services
         console.log(services)
 
         //add services to DOM

@@ -5,7 +5,12 @@ const { MongoClient } = require("mongodb");
 
 const PORT = 55555
 
-require('dotenv').config();
+
+//dns black magic
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1'])
+
+require('dotenv').config({debug : true});
 
 const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
@@ -56,8 +61,10 @@ const server = http.createServer((req,res)=>{
             res.end(content)
         })
     } else if (req.url==="/api"){
+        console.log("API request!")
         catbox_services.find({}).toArray()
             .then(results => {
+                console.log(`Here are my results:${results}`)
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify(results));
             })
