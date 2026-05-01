@@ -1,7 +1,7 @@
 
 // Base URL for all API requests
 // In production, change this to your live domain e.g. 'https://yoursite.com/api'
-const API_URL = 'http://localhost:5555/api' // dont forget to change this later
+const API_URL = 'https://product-github-io.onrender.com//api' // dont forget to change this later
 
 // ===== PROTECT THE PAGE =====
 // Read the token that was saved to localStorage when the user logged in
@@ -44,7 +44,7 @@ document.getElementById('addBtn').addEventListener('click', () => {
         return;
     }
 
-    fetch('/api/Products', {
+    fetch(`${API_URL}/Products`, {
         method: 'POST',
         headers: authHeader(),
         body: JSON.stringify({ product_name, price: Number(price), cat_product, box_product, availability })
@@ -91,7 +91,7 @@ document.getElementById('updateBtn').addEventListener('click', () => {
         return;
     }
 
-    fetch(`/api/Products/${id}`, {
+    fetch(`${API_URL}/Products/${id}`, {
         method: 'PUT',
         headers: authHeader(),
         body: JSON.stringify(updates)
@@ -124,7 +124,7 @@ document.getElementById('deleteBtn').addEventListener('click', () => {
         return;
     }
 
-    fetch(`/api/Products/${id}`, { headers: authHeader(), method: 'DELETE', body:JSON.stringify({_id:id})})
+    fetch(`${API_URL}/Products/${id}`, { headers: authHeader(), method: 'DELETE', body:JSON.stringify({_id:id})})
         .then(res => {
             if (res.status === 401) { window.location.href = '/login'; return null; }
             return res.json();
@@ -141,7 +141,7 @@ document.getElementById('deleteBtn').addEventListener('click', () => {
 
 // GET - Fetch all Products
 document.getElementById('fetchBtn').addEventListener('click', () => {
-    fetch('/api/Products')
+    fetch(API_URL+'/Products')
         .then(res => {
             if (res.status === 401) { window.location.href = '/login'; return null; }
             return res.json();
