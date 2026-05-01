@@ -1,0 +1,73 @@
+:root {
+    --TG-Color: #900;
+    --HG-Color: #f36;
+    --FG-Color: #f9b;
+    --MG-Color: #fbc;
+    --BG-Color: #fdd;
+    --LG-Color: #fef;
+}
+
+body {
+    margin: 0;
+    background-color: var(--BG-Color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "control"
+        "view"
+    ;
+    max-width: 100vw;
+}
+
+h1,
+h2,
+p,
+strong,
+input,
+label,
+button {
+    text-align: center;
+    color: var(--TG-Color);
+}
+
+p,
+li {
+    text-align: center;
+    color: var(--HG-Color);
+}
+
+.cBox {
+    background-color: var(--MG-Color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+.pBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1%;
+    padding: 1%;
+    grid-area: "view";
+    row-gap: 1%;
+}
+
+.item {
+    background-color: var(--MG-Color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 1%;
+}
+
+.mainFlex {
+    display: flex;
+    flex-direction: column;
+    grid-area: "control";
+}

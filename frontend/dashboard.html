@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+
+<body>
+    <div class="mainFlex">
+        <div class="cBox">
+            <h1>My Product Collection</h1>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        <div class="cBox">
+            <h2>Add a Product</h2>
+            <input type="text" id="name" placeholder="Product Name">
+            <input type="number" id="price" placeholder="Price">
+            <label>Cat Product<input type="checkbox" id="catprd"></label>
+            <label>Box Product<input type="checkbox" id="boxprd"></label>
+            <label>Available?<input type="checkbox" id="avail"></label>
+            <button id="addBtn">Add Product</button>
+            <p id="message"></p>
+        </div>
+
+        <div class="cBox">
+            <h2>Update a Product</h2>
+            <input type="text" id="updateId" placeholder="Product ID">
+            <input type="text" id="updateName" placeholder="Product Name">
+            <input type="number" id="updatePrice" placeholder="Price">
+            <label>Cat Product<input type="checkbox" id="updateCatprd"></label>
+            <label>Box Product<input type="checkbox" id="updateBoxprd"></label>
+            <label>Available?<input type="checkbox" id="updateAvail"></label>
+            <label>Update Properties<input type="checkbox" id="updateProp"></label>
+            <button id="updateBtn">Update Product</button>
+            <p id="updateMessage"></p>
+        </div>
+
+        <div class="cBox">
+            <h2>Delete a Product</h2>
+            <input type="text" id="deleteId" placeholder="Product _id">
+            <button id="deleteBtn">Delete Product</button>
+            <p id="deleteMessage"></p>
+        </div>
+
+        <div class="cBox">
+            <h2>All Products</h2>
+            <button id="fetchBtn">Fetch Products</button>
+        </div>
+    </div>
+    <div id="products" class="pBox"></div>
+    <script src="js/dash.js"></script>
+</body>
+
+</html>
