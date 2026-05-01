@@ -1,0 +1,43 @@
+ :root {
+            --TG-Color: #900;
+            --HG-Color: #f36;
+            --FG-Color: #f9b;
+            --MG-Color: #fbc;
+            --BG-Color: #fdd;
+            --LG-Color: #fef;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--BG-Color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1,
+        h2,
+        p,
+        strong,
+        input,
+        label,
+        button {
+            text-align: center;
+            color: var(--TG-Color);
+        }
+
+        p,
+        li {
+            text-align: center;
+            color: var(--HG-Color);
+        }
+
+        .form{
+            background-color: var(--MG-Color);
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            padding: 1%;
+        }
